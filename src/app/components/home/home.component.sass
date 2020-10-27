@@ -1,0 +1,200 @@
+$heightAndWinPC: 202px
+$heightAndWinCell: 320px
+$heightAndWinTablet: 242px
+.filters
+    margin: 20px 0
+    width: 100%
+    display: flex
+    justify-content: space-around
+    align-items: center
+    button
+        width: 350px
+        font-size: 19px
+        font-weight: 600
+        i
+            margin-left: 5px
+    .items
+        width: auto
+        color: #ffffff
+        font-size: 18px
+        .item
+            padding: 1px 0
+            cursor: pointer
+            h5
+                margin-left: 15px
+        .item:hover
+            background: #3f3f3f !important
+    .random
+        
+.pokemonsContainer
+    display: grid
+    //grid-template-columns:repeat( auto-fit, minmax(250px, 1fr) )
+    grid-template-columns: repeat( auto-fit, minmax($heightAndWinPC, 1fr) )
+    width: 100%
+    .pokemon
+        cursor: pointer
+        margin-left: auto
+        margin-right: auto 
+        line-height: 0px !important
+        .textContent
+            position: relative
+            top: -25px
+        .imgcontainer
+            height: $heightAndWinPC
+            width: $heightAndWinPC
+            background: #c2c2c248
+            border-radius: 10px
+            img
+                width: $heightAndWinPC
+                height: $heightAndWinPC
+        .num
+            color: #878787
+            font-size: 14px
+        h4
+            font-size: 26px
+            font-weight: 500
+        .types
+            .span
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                width: 90px !important
+                height: 20px
+                text-align: center
+                background: #000000
+                color: #ffffff
+                border: 2px solid #ffffff
+                border-radius: 5px
+    .pokemon:hover
+        position: relative
+        animation: pokehover 0.2s linear
+        animation-fill-mode: forwards
+        //top: -5px
+        //-webkit-box-shadow: 2px 6px 30px 0px rgba(0,0,0,0.3)
+        //box-shadow: 2px 6px 30px 0px rgba(0,0,0,0.3)
+
+@keyframes pokehover
+    0%
+        top: 0
+        -webkit-box-shadow: 2px 6px 30px 0px rgba(0,0,0,0.0)
+        box-shadow: 2px 6px 30px 0px rgba(0,0,0,0.0)
+    100%
+        top: -5px
+        -webkit-box-shadow: 2px 6px 30px 0px rgba(0,0,0,0.3)
+        box-shadow: 2px 6px 30px 0px rgba(0,0,0,0.3)
+//POKEMONS TYPES in js, is the classList.add to this classNames
+.Flyingtype
+    background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%) !important
+    color: #000000 !important
+.DragonType
+    background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%) !important
+    
+
+@media (max-width: 800px)
+    .pokemonsContainer
+        grid-template-columns: repeat( auto-fit, minmax($heightAndWinTablet, 1fr) )
+        .pokemon
+            .imgcontainer
+                height: $heightAndWinTablet
+                width: $heightAndWinTablet
+                img
+                    height: $heightAndWinTablet
+                    width: $heightAndWinTablet
+@media (max-width: 480px)
+    .pokemonsContainer
+        grid-template-columns: repeat( auto-fit, minmax($heightAndWinCell, 1fr) )
+        .pokemon
+            .imgcontainer
+                height: $heightAndWinCell
+                width: $heightAndWinCell
+                img
+                    height: $heightAndWinCell
+                    width: $heightAndWinCell
+
+//LOADER CSS
+.lds-roller 
+    display: inline-block
+    position: relative
+    left: 48%
+    width: 80px
+    height: 80px
+
+.lds-roller div 
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite
+    transform-origin: 40px 40px
+    
+
+.lds-roller div:after 
+    content: " "
+    display: block
+    position: absolute
+    width: 7px
+    height: 7px
+    border-radius: 50%
+    background: #000000
+    margin: -4px 0 0 -4px
+
+.lds-roller div:nth-child(1) 
+    animation-delay: -0.036s
+
+.lds-roller div:nth-child(1):after 
+    top: 63px
+    left: 63px
+
+.lds-roller div:nth-child(2) 
+    animation-delay: -0.072s
+
+.lds-roller div:nth-child(2):after 
+    top: 68px
+    left: 56px
+
+.lds-roller div:nth-child(3) 
+    animation-delay: -0.108s
+
+.lds-roller div:nth-child(3):after 
+    top: 71px
+    left: 48px
+
+.lds-roller div:nth-child(4) 
+    animation-delay: -0.144s
+
+.lds-roller div:nth-child(4):after 
+    top: 72px
+    left: 40px
+
+.lds-roller div:nth-child(5) 
+    animation-delay: -0.18s
+
+.lds-roller div:nth-child(5):after 
+    top: 71px
+    left: 32px
+
+.lds-roller div:nth-child(6) 
+    animation-delay: -0.216s
+
+.lds-roller div:nth-child(6):after 
+    top: 68px
+    left: 24px
+
+.lds-roller div:nth-child(7) 
+    animation-delay: -0.252s
+
+.lds-roller div:nth-child(7):after 
+    top: 63px
+    left: 17px
+
+.lds-roller div:nth-child(8) 
+    animation-delay: -0.288s
+
+.lds-roller div:nth-child(8):after 
+    top: 56px
+    left: 12px
+
+@keyframes lds-roller 
+    0% 
+        transform: rotate(0deg)
+  
+    100% 
+        transform: rotate(360deg)
+  
+

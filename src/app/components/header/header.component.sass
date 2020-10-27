@@ -1,0 +1,91 @@
+$bgcolor: #313131
+$text: arial,sans-serif
+header
+    h1
+        color: #646464
+        margin-left: 70px
+        cursor: pointer
+    .headerSearch
+        background: $bgcolor
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-bottom: 20px
+        color: #ffffff
+        .left
+            margin-left: 35px
+            h2
+                font-size: 30px
+                font-family: $text
+                font-weight: 200
+            input
+                height: 37px
+                width: 304px
+                border: 2px solid #888888
+                position: relative
+                top: -15px
+            button
+                margin-left: 10px
+                position: relative
+                top: -15px
+                border: none
+                height: 37px
+                width: 50px
+                background: #1eb500
+                color: #ffffff
+                
+        .right
+            border-radius: 15px
+            color: #ffffff
+            background: #2e7c00
+            padding: 7px
+            padding-left: 25px
+            padding-right: 25px
+            margin-top: 30px
+            margin-right: 35px
+            font-size: 21px
+    .bottom1
+        background: #828282
+        height: 50px
+        width: 100% !important
+    .bottom2
+        width: 50%
+        height: 20px
+        margin-left: auto
+        margin-right: auto
+
+@media (max-width: 480px)
+    header
+        h1
+            font-size: 40px
+            margin-left: 30px
+    .headerSearch
+        flex-direction: column
+        padding-bottom: 0px
+        height: 270px 
+        .right
+            font-size: 24px
+            width: 75%
+            position: relative
+            left: 17px
+            top: -25px
+        .left
+            margin-left: 5px !important
+            h2
+                font-size: 30px !important
+            input
+                width: 250px !important
+                height: 60px
+            button
+                //top: -52px !important
+                height: 60px
+                width: 52px
+                //left: 245px !important
+    .bottom1
+        height: 35px !important
+        width: 100%
+                    
+                
+            
+
