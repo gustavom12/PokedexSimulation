@@ -10,8 +10,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { OrderbyPipe } from './pipes/orderby.pipe';
 import { MiniChangeIdPipe } from './pipes/mini-change-id.pipe';
 import { PokemonTypeDirective } from './directives/pokemon-type.directive';
-import { PoketypeDirective } from './directives/poketype.directive'
-
+import { SearchComponent } from './components/search/search.component';
+import { StatsDirective } from './directives/stats.directive';
+import { EvolutionsComponent } from './components/poke-id/evolutions/evolutions.component';
+import { HDirective } from './directives/heightandWidth.directive';
+import { TypesComponent } from './components/types/types.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,11 @@ import { PoketypeDirective } from './directives/poketype.directive'
     OrderbyPipe,
     MiniChangeIdPipe,
     PokemonTypeDirective,
-    PoketypeDirective
+    SearchComponent,
+    StatsDirective,
+    EvolutionsComponent,
+    HDirective,
+    TypesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,21 +1,20 @@
 <div class="home text-center">
-  <h2> Sitio aún no terminado </h2>
     <div class="filters">
-        <button class="btn btn-primary random">Random</button>
+        <button (click)="random(true)" class="btn btn-primary random">Random</button>
         <div class="dropdown">
           <button class="btn btn-secondary">Order By...</button>
-          <div class="items">
+          <div class="items animate__animated animate__fadeIn">
             <div class="item bg-secondary">
-              <h5>Lowest Number</h5>
+              <h5 (click)="order('lowest')">Lowest Number</h5>
             </div>
             <div class="item bg-secondary">
-              <h5>Highest Number</h5>
+              <h5 (click)="order('highest',highestUrl)">Highest Number</h5>
             </div>
             <div class="item bg-secondary">
-              <h5>A-Z</h5>
+              <h5 (click)="order('a-z')">A-Z</h5>
             </div>
             <div class="item bg-secondary">
-              <h5> Z-A</h5>
+              <h5 (click)="order('z-a')"> Z-A</h5>
             </div>
           </div>
         </div>
@@ -23,16 +22,17 @@
     
 <div class="pokemonsContainer">
     
-    <div *ngFor="let pokemon of pokemons|orderby; let i = index " class="pokemon text-left"
+    <div *ngFor="let pokemon of pokemons" class="pokemon text-left"
      routerLink="/pokeid/{{pokemon.id}}">
         <div  class="imgcontainer">
-            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{pokemon.id|miniChangeId}}.png" alt="">
+            <img alt="{{pokemon.name}}"
+            src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{pokemon.id|miniChangeId}}.png" alt="">
         </div>
         <div class="textContent">
             <h6 class="num">N.º{{pokemon.id|miniChangeId}}</h6>
             <h4>{{pokemon.name | titlecase}}</h4>
             <div class="types">
-                <div class="span" *ngFor="let t of pokemon.types" [PokemonType]>{{t.type.name | titlecase}}</div>
+                <div class="span" *ngFor="let t of pokemon.types" routerLink="../../types/{{t.type.name}}" [PokemonType]>{{t.type.name | titlecase}}</div>
             </div>
         </div>
     </div>

@@ -1,20 +1,15 @@
 <header>
     <h1 routerLink=""> Pokédex </h1>
+    <h2>Nombre o número</h2>
     <div class="headerSearch">
-        <div class="left">
-            <h2>Nombre o número</h2>
-            <input type="search" name="" id="">
-            <button class="btnn fas fa-search"></button>
+        <div class="left d-flex justify-content-center align-items-center">
+            <input type="search" name="" id="search">
+            <button (click)="goToSearchPage()" class="btnn fas fa-search"></button>
         </div>
         <div class="right text-center">
             <p> Busca un Pokémon por su nombre o usando <br>
             su número de la Pokédex Nacional </p>
         </div>
-        
     </div>
     <div class="bottom1"></div>
-    <!--<div class="bottom2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
-        <polygon points="100 0 100 10 0 10" />
-      </svg>  </div>-->
 </header>

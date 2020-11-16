@@ -1,0 +1,22 @@
+<section class="typesContainer d-flex justify-content-center align-items-center flex-column">
+    <h1 class="mt-2 mb-2 text-capitalize"> {{type}} </h1>
+    <div class="pokemonsContainer">
+    
+        <div *ngFor="let pokemon of pokemons|orderby" class="pokemon text-left"
+         routerLink="/pokeid/{{pokemon.id}}">
+            <div  class="imgcontainer">
+                <img alt="{{pokemon.name}}"
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{pokemon.id|miniChangeId}}.png" alt="">
+            </div>
+            <div class="textContent">
+                <h6 class="num">N.º{{pokemon.id|miniChangeId}}</h6>
+                <h4>{{pokemon.name | titlecase}}</h4>
+                <div class="types">
+                    <div class="span" *ngFor="let t of pokemon.types" [PokemonType]>{{t.type.name|titlecase}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOADER -->
+    <div *ngIf="!allPokemonsLoaded" class="lds-roller observer"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</section>

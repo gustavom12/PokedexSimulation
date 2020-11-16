@@ -1,0 +1,175 @@
+//background: transparent url(../img/chrome/notches/notch-white-xxl.png) no-repeat
+
+.pokemonid::after
+    height: 100vh
+    width: 1024px
+    position: absolute
+    z-index: 2
+
+.statAnimation
+    animation: height 2s linear
+    
+
+.pokemonid
+    padding-top: 3vh
+    position: relative
+    z-index: 0
+    background-image: url(https://i.ibb.co/ww6DCTB/body-bg-1.jpg)
+    background-size: cover
+    .miniheader
+        display: grid
+        grid-template-columns: 1fr 3fr 1fr
+        .title
+            color: #000000
+            background: #00000000 !important
+            //grid-column-start: 1
+            //grid-column-end: 3
+            display: flex
+            align-items: center
+            margin-left: auto
+            margin-right: auto
+        div
+            background: #c5c5c5
+            height: 10vh
+            color: #ffffff
+            display: flex
+            justify-content: space-around
+            transition: all 0.3s linear
+            cursor: pointer
+            i::before
+                width: 50px
+                height: 50px
+                font-size: 63px
+                //font-weight: 500
+                border-radius: 50%
+                color: #ffffff
+            h1
+                display: inline-block
+                font-weight: 500
+                font-size: 45px
+            h2
+                display: inline-block
+                font-size: 30px
+                font-weight: 400
+                color: #b4b4b4
+            span
+                font-size: 20px
+                display: flex
+                align-items: center
+            .pname
+                color: #303030
+                font-weight: 500
+        .next:hover
+            background: #30a7d7
+            transition: all 0.3s linear
+        .prev:hover
+            background: #30a7d7
+            transition: all 0.3s linear
+            color: #ffffff
+
+.imgContainer
+    width: 425px
+    height: 460px
+    background: #c2c2c248
+    img
+        width: 425px
+        height: 460px
+.pokemon
+    padding: 50px
+    width: 100%
+    .atributos
+        background: #30a7d7
+        color: #ffffff
+        height: 150px
+        width: 100%
+        border-radius: 20px
+        h5
+            font-size: 24px
+            span
+                font-size: 22px
+    .types
+        h4
+            font-weight: 400
+        span
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            width: 150px !important
+            height: 35px
+            text-align: center
+            background: #000000
+            color: #ffffff
+            border: 2px solid #ffffff
+            border-radius: 10px
+            font-size: 20px
+            cursor: pointer
+    .stats
+        height: 250px
+        background-color: #99dfde70
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 
+        color: #000
+        font-size: 11px
+        grid-template-rows: 225px 25px
+        border-radius: 20px
+        .specialAtack
+            line-height: 11px
+        .specialDefense
+            line-height: 11px
+        .bar
+            margin: 0 10px 0 10px
+            align-self: flex-end
+            
+@media (max-width: 480px)
+    .pokemon
+        padding: 10px
+    .pname
+        display: none !important
+    .pid
+        display: none !important
+    .title
+        text-align: center
+    .imgContainer
+        width: 100%
+        height: 300px
+        margin-bottom: 20px
+        img
+            width: 300px
+            height: 300px
+    .pokemon
+        .stats
+            grid-template-columns: repeat( 6, minmax(30px, 1fr))
+            .bar
+                margin: 0 5px 0 5px
+        .atributos
+            h5
+                font-size: 18px
+                span
+                    font-size: 16px
+@media (max-width: 920px)
+    .pokemon
+        .imgContainer
+            margin-right: auto
+            margin-left: auto
+        .atributos
+            h5
+                font-size: 21px
+                span
+                    font-size: 19px
+
+
+@keyframes height
+    0%
+        height: 0px
+    33%
+        height: 33%
+    66%
+        height: 66%
+    100%
+        height: 100%
+
+.Flyingtype
+    background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%) !important
+    color: #000000 !important
+.DragonType
+    background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%) !important

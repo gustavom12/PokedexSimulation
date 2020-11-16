@@ -5,14 +5,13 @@ import { Directive, Input,ElementRef, AfterViewInit } from '@angular/core';
 })
 export class PokemonTypeDirective implements AfterViewInit{
   @Input("PokemonType")text: String
-
+//Set color to pokemon types
   constructor(public el:ElementRef) { }
   $el:HTMLElement = this.el.nativeElement
   ngAfterViewInit(){
     const text = this.$el.textContent
-    console.log(text)
+    //console.log(text)
     if(text === "Poison"){ 
-      console.log("asd")
       this.$el.style.background = "#b97fc9"
     }
     if(text === "Grass"){

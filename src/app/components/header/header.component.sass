@@ -2,33 +2,38 @@ $bgcolor: #313131
 $text: arial,sans-serif
 header
     h1
+        display: flex
+        justify-content: flex-start
+        align-items: center
         color: #646464
         margin-left: 70px
         cursor: pointer
+    h2
+        font-size: 30px
+        font-family: $text
+        font-weight: 400
+        position: relative
+        top: 60px
+        margin-left: 35px
+        color: #ffffff  
     .headerSearch
         background: $bgcolor
+        min-height: 185px !important
         width: 100%
         display: flex
         align-items: center
         justify-content: space-between
         padding-bottom: 20px
         color: #ffffff
+        
         .left
             margin-left: 35px
-            h2
-                font-size: 30px
-                font-family: $text
-                font-weight: 200
             input
                 height: 37px
                 width: 304px
                 border: 2px solid #888888
-                position: relative
-                top: -15px
             button
                 margin-left: 10px
-                position: relative
-                top: -15px
                 border: none
                 height: 37px
                 width: 50px
@@ -45,6 +50,7 @@ header
             margin-top: 30px
             margin-right: 35px
             font-size: 21px
+            margin: 20px
     .bottom1
         background: #828282
         height: 50px
@@ -55,37 +61,54 @@ header
         margin-left: auto
         margin-right: auto
 
-@media (max-width: 480px)
+@media (max-width: 580px)
     header
         h1
             font-size: 40px
             margin-left: 30px
-    .headerSearch
-        flex-direction: column
-        padding-bottom: 0px
-        height: 270px 
-        .right
-            font-size: 24px
-            width: 75%
+        .headerSearch
+            flex-direction: column
+            padding-bottom: 0px
+            height: 270px 
+            .left
+                position: relative
+                top: 60px
+                input
+                    width: 240px
+                    height: 37px
+                button
+                    height: 37px
+                    width: 42px
+                    margin-left: 0
+            .right
+                font-size: 20px
+                width: 80%
+                position: relative
+                margin-bottom: 10px
+        h2
+            font-size: 30px !important
+            top: 50px
+            text-align: center !important
+                
+        .bottom1
+            height: 35px !important
+            width: 100%
+@media (max-width: 900px)
+    header
+        h2
             position: relative
-            left: 17px
-            top: -25px
-        .left
-            margin-left: 5px !important
-            h2
-                font-size: 30px !important
-            input
-                width: 250px !important
-                height: 60px
-            button
-                //top: -52px !important
-                height: 60px
-                width: 52px
-                //left: 245px !important
-    .bottom1
-        height: 35px !important
-        width: 100%
-                    
+            top: 65px
+            text-align: left
+            margin-left: 10px
+        .headerSearch
+            .left
+                margin-left: 10px
+            .right
+                margin-right: 10px
+
+
+
+
                 
             
 

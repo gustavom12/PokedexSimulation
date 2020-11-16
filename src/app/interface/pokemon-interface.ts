@@ -1,9 +1,9 @@
 export interface pokemon {
     abilities: any[];
     base_experience: number;
-    forms: any[];
+    forms: form[];
     game_indices: any[];
-    height: number;
+    height: any;
     held_items: any[];
     id: number;
     is_default: boolean;
@@ -15,5 +15,10 @@ export interface pokemon {
     sprites: any;
     stats: any[];
     types: any[];
-    weight: number;
+    weight: any;
+}
+
+interface form{
+    name: string;
+    url:string
 }
